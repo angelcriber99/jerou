@@ -8,8 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/jerou_logo_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Zaml"
-        android:fullBackupContent="">
+        android:theme="@style/Theme.Zaml">
         <activity
             android:name=".Splash"
             android:exported="true">
