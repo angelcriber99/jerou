@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     }
     //esta funcion crea menu de los tres puntos
 
-    /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_tres_puntos, menu)
         return true
     }
@@ -21,9 +21,11 @@ class MainActivity : AppCompatActivity() {
         val item_selected: Int = item.itemId
 
         if (item_selected == R.id.item1) {
-            Firebase.auth.signOut()
-            cambiarPantallaLogin()
+            /*Firebase.auth.signOut()
+            cambiarPantallaLogin()*/
+            // val loginIntent = Intent(this, Cuentas::class.java)
+            // startActivity(loginIntent)
         }
         return super.onOptionsItemSelected(item)
-    }*/
+    }
 }
