@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "499330141715",
+    "project_id": "jerou-app",
+    "storage_bucket": "jerou-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499330141715:android:cef7f17eec15d4bd14f9e6",
+        "android_client_info": {
+          "package_name": "com.angel.zaml"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499330141715-i9e4qi6avvu23f4batm06kb1eslf3hhj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.angel.zaml",
+            "certificate_hash": "a6ee3a9237bb9a9e0f2eb4f640e9c4c98ba6392e"
+          }
+        },
+        {
+          "client_id": "499330141715-c36je5sn9n3ji5h4o02nfd109qk8dqbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe5JYai2MqSMykHJIyXJZWruWNYzqXUIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499330141715-c36je5sn9n3ji5h4o02nfd109qk8dqbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
