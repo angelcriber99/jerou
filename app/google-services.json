@@ -14,7 +14,39 @@
       },
       "oauth_client": [
         {
-          "client_id": "499330141715-i9e4qi6avvu23f4batm06kb1eslf3hhj.apps.googleusercontent.com",
+          "client_id": "499330141715-hhl5bt43a8f3u01ecfqdo04fnpsvtj97.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.angel.zaml",
+            "certificate_hash": "89cbe636dbe8a8d53290c769ffefab65ceb72196"
+          }
+        },
+        {
+          "client_id": "499330141715-lc26euaj1lhn08cotct135qps0h7tgc2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.angel.zaml",
+            "certificate_hash": "29499e14f78d2ae899a753315d135c010854237b"
+          }
+        },
+        {
+          "client_id": "499330141715-linlof1mjrn91omoi27pkptj3at6lscm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.angel.zaml",
+            "certificate_hash": "bcfb68c107bb0baf7fdc904314e07e318d89de57"
+          }
+        },
+        {
+          "client_id": "499330141715-m9roaf9pdb1avd0dbhi4knib4ms8ljlu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.angel.zaml",
+            "certificate_hash": "a1fea9b5901dac786e315816db54d34ec181959d"
+          }
+        },
+        {
+          "client_id": "499330141715-mgg8c9pkg6js53avrpngibnqagahjt7v.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.angel.zaml",
