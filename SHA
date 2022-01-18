@@ -1,2 +1,2 @@
-Sacar SHA Android estudio, poner este comando en el CMD
-keytool -exportcert -list -v -keystore %USERPROFILE%\.android\debug.keystore
+Sacar SHA1 y SHA256 Android estudio, poner este comando en el CMD
+keytool -list -v -keystore "C:\Users\yourname\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
