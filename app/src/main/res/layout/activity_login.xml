@@ -16,15 +16,15 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
+        android:paddingLeft="10dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:paddingLeft="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintVertical_bias="0.278" />
 
     <EditText
         android:id="@+id/Password"
@@ -35,15 +35,15 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:paddingLeft="10dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:paddingLeft="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.259" />
+        app:layout_constraintVertical_bias="0.382" />
 
     <Button
         android:id="@+id/login"
@@ -54,10 +54,10 @@
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405"
+        app:layout_constraintVertical_bias="0.513"
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     <Button
@@ -72,7 +72,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.528" />
+        app:layout_constraintVertical_bias="0.632" />
 
     <ImageView
         android:id="@+id/google_image"
@@ -113,5 +113,19 @@
         app:layout_constraintVertical_bias="0.925"
         app:srcCompat="@drawable/telephone_49"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="154dp"
+        android:layout_height="60dp"
+        android:fontFamily="sans-serif-black"
+        android:text="JEROU"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
