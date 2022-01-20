@@ -86,14 +86,14 @@ class activity_login : AppCompatActivity() {
     }
 
     //Cambiar pantalla Registro
-    fun cambiarPantallaRegistro(view: android.view.View){
+    fun CambiarPantallaRegistro(view: View){
         val registerIntent = Intent(this, RegisterActivity::class.java)
         startActivity(registerIntent)
 
     }
 
     //Registro telefono
-    fun cambiarPantallaTelefono(view: View){
+    fun CambiarPantallaTelefono(view: View){
         var loginIntent = Intent(this, PhoneRegister::class.java)
         //Empezamos el intento
         startActivity(loginIntent)
