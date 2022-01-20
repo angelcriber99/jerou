@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Zaml">
         <activity
+            android:name=".activity_login"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
