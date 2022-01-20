@@ -13,9 +13,6 @@
             android:name=".PhoneRegister"
             android:exported="false" />
         <activity
-            android:name=".PhoneRegisterActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity_login"
             android:exported="false" />
         <activity

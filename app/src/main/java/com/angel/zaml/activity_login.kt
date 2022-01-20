@@ -94,7 +94,7 @@ class activity_login : AppCompatActivity() {
 
     //Registro telefono
     fun cambiarPantallaTelefono(view: View){
-        var loginIntent = Intent(this, PhoneRegisterActivity::class.java)
+        var loginIntent = Intent(this, PhoneRegister::class.java)
         //Empezamos el intento
         startActivity(loginIntent)
     }
