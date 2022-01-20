@@ -49,7 +49,17 @@ dependencies {
     // Add the dependency for the Firebase SDK for Google Analytics
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation 'com.google.firebase:firebase-analytics-ktx'
-
-    //Para registro num teléfono
     implementation 'com.google.firebase:firebase-auth-ktx'
+
+    //Carrousel
+    // Material Components for Android. Replace the version with the latest version of Material Components library.
+    implementation 'com.google.android.material:material:1.4.0'
+
+    // Circle Indicator (To fix the xml preview "Missing classes" error)
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.0.6'
+    //Fin Carrousel
+    //Telephone
+    implementation 'com.google.android.gms:play-services-safetynet:17.0.0'
 }

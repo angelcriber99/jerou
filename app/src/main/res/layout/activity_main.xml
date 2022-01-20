@@ -12,7 +12,6 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="650dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,8 +20,59 @@
 
 
         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/burguerKingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Burguer King" />
+
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/carousel1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:id="@+id/mcDonaldsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="McDonalds" />
+
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/carousel2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:id="@+id/kfcTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KFC" />
+
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/carousel3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:id="@+id/tacoBellTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Taco Bell" />
+
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/carousel4"
+                android:layout_width="match_parent"
+                android:layout_height="140dp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -55,13 +105,5 @@
 
         </LinearLayout>
     </LinearLayout>
-
-    <FrameLayout
-        android:layout_width="409dp"
-        android:layout_height="648dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
-
-    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
