@@ -49,7 +49,7 @@ class activity_login : AppCompatActivity() {
                 if (email == "" || email ==null) {
                     val builder = AlertDialog.Builder(this)
                     builder.setTitle("Error")
-                    builder.setMessage("Email is empty. You must entering an email")
+                    builder.setMessage("Email is empty. You must enter an email")
                     builder.setPositiveButton("OK", null)
                     val dialog: AlertDialog = builder.create()
                     dialog.show()
@@ -57,7 +57,7 @@ class activity_login : AppCompatActivity() {
                 if (password == "" || password ==null || password.length<6) {
                     val builder = AlertDialog.Builder(this)
                     builder.setTitle("Error")
-                    builder.setMessage("Password is empty or it is invalid. You must entering a password with more than 6 characters")
+                    builder.setMessage("Password is empty or it is invalid. You must enter a password with more than 6 characters")
                     builder.setPositiveButton("OK", null)
                     val dialog: AlertDialog = builder.create()
                     dialog.show()
