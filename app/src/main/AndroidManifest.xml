@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Zaml">
         <activity
+            android:name=".Cuenta"
+            android:exported="false" />
+        <activity
             android:name=".PhoneRegister"
             android:exported="false" />
         <activity
