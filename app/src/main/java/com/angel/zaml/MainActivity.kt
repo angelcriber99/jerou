@@ -11,6 +11,9 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 class MainActivity : AppCompatActivity() {
     val list = mutableListOf<CarouselItem>()
+    val list2 = mutableListOf<CarouselItem>()
+    val list3 = mutableListOf<CarouselItem>()
+    val list4 = mutableListOf<CarouselItem>()
     //view binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,14 +51,13 @@ class MainActivity : AppCompatActivity() {
         //Find carrousel id
         val carousel2: ImageCarousel = findViewById(R.id.carousel2)
         //Add content to the array
-        list.add(CarouselItem(R.drawable.busqueda, "Originals Campesina"))
-        list.add(CarouselItem(R.drawable.burgerking_originals_mediterranea, "Originals Mediterranea"))
-        list.add(CarouselItem(R.drawable.burgerking_vegetariana, "Vegetariana"))
-        list.add(CarouselItem(R.drawable.burgerking_whopper, "Whopper"))
-        list.add(CarouselItem(R.drawable.burguerking_baconking, "Bacon King"))
+        list2.add(CarouselItem(R.drawable.mcdonalds_cbo, "Cbo"))
+        list2.add(CarouselItem(R.drawable.mcdonalds_happymeal, "Happy Meal"))
+        list2.add(CarouselItem(R.drawable.mcdonalds_mcaitana, "McAitana"))
+        list2.add(CarouselItem(R.drawable.mcdonalds_menuforyou, "Menu for you"))
 
         //Add photos to the carrousel
-        carousel2.addData(list)
+        carousel2.addData(list2)
 
         // Carousel listener
         carousel2.carouselListener = object : CarouselListener {
@@ -75,14 +77,14 @@ class MainActivity : AppCompatActivity() {
         //Find carrousel id
         val carousel3: ImageCarousel = findViewById(R.id.carousel3)
         //Add content to the array
-        list.add(CarouselItem(R.drawable.burgerking_originals_campesina, "Originals Campesina"))
-        list.add(CarouselItem(R.drawable.burgerking_originals_mediterranea, "Originals Mediterranea"))
-        list.add(CarouselItem(R.drawable.burgerking_vegetariana, "Vegetariana"))
-        list.add(CarouselItem(R.drawable.burgerking_whopper, "Whopper"))
-        list.add(CarouselItem(R.drawable.burguerking_baconking, "Bacon King"))
+        list3.add(CarouselItem(R.drawable.kfc_antonia, "Menu Antonia"))
+        list3.add(CarouselItem(R.drawable.kfc_cubodos, "Cubo para 2 personas"))
+        list3.add(CarouselItem(R.drawable.kfc_menusobrada, "Menu Sobrada"))
+        list3.add(CarouselItem(R.drawable.kfc_piezascoronel, "Piezas del coronel"))
+        list3.add(CarouselItem(R.drawable.kfc_twoburgers, "Menu two burguers"))
 
         //Add photos to the carrousel
-        carousel3.addData(list)
+        carousel3.addData(list3)
 
         // Carousel listener
         carousel3.carouselListener = object : CarouselListener {
@@ -102,14 +104,14 @@ class MainActivity : AppCompatActivity() {
         //Find carrousel id
         val carousel4: ImageCarousel = findViewById(R.id.carousel4)
         //Add content to the array
-        list.add(CarouselItem(R.drawable.burgerking_originals_campesina, "Originals Campesina"))
-        list.add(CarouselItem(R.drawable.burgerking_originals_mediterranea, "Originals Mediterranea"))
-        list.add(CarouselItem(R.drawable.burgerking_vegetariana, "Vegetariana"))
-        list.add(CarouselItem(R.drawable.burgerking_whopper, "Whopper"))
-        list.add(CarouselItem(R.drawable.burguerking_baconking, "Bacon King"))
+        list4.add(CarouselItem(R.drawable.tacobell_burritobowl, "Menu BurritoBowl"))
+        list4.add(CarouselItem(R.drawable.tacobell_crunchywrap, "Menu crunchywrap"))
+        list4.add(CarouselItem(R.drawable.tacobell_granburrito, "Gran burrito"))
+        list4.add(CarouselItem(R.drawable.tacobell_quesadilla, "Menu Quesadilla"))
+        list4.add(CarouselItem(R.drawable.tacobell_tacos, "Tacos"))
 
         //Add photos to the carrousel
-        carousel4.addData(list)
+        carousel4.addData(list4)
 
         // Carousel listener
         carousel4.carouselListener = object : CarouselListener {
