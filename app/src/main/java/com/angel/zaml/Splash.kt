@@ -23,7 +23,7 @@ class Splash : AppCompatActivity() {
             } else{
                 startActivity(Intent(this, MainActivity::class.java))
             }*/
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, activity_login::class.java))
             finish()
         },tiempo)
 
