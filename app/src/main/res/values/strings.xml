@@ -16,4 +16,7 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string name="default_web_client_id2" translatable="false">499330141715-c36je5sn9n3ji5h4o02nfd109qk8dqbt.apps.googleusercontent.com</string>
+    <string name="preferences">com.angel.zaml.PREFERENCE_KEY</string>
 </resources>
