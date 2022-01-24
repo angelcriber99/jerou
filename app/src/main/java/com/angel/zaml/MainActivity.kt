@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         carousel1.carouselListener = object : CarouselListener {
             override fun onClick(position: Int, carouselItem: CarouselItem) {
                 //https://youtu.be/ZnarHv_Jx-M?t=953
-                Toast.makeText(this@MainActivity, "Coche: ${carouselItem.caption}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Burguer King: ${carouselItem.caption}", Toast.LENGTH_SHORT).show()
             }
 
             override fun onLongClick(position: Int, dataObject: CarouselItem) {
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         carousel2.carouselListener = object : CarouselListener {
             override fun onClick(position: Int, carouselItem: CarouselItem) {
                 //https://youtu.be/ZnarHv_Jx-M?t=953
-                Toast.makeText(this@MainActivity, "Coche: ${carouselItem.caption}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "McDonalds: ${carouselItem.caption}", Toast.LENGTH_SHORT).show()
             }
 
             override fun onLongClick(position: Int, dataObject: CarouselItem) {
@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         carousel3.carouselListener = object : CarouselListener {
             override fun onClick(position: Int, carouselItem: CarouselItem) {
                 //https://youtu.be/ZnarHv_Jx-M?t=953
-                Toast.makeText(this@MainActivity, "Coche: ${carouselItem.caption}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "KFC: ${carouselItem.caption}", Toast.LENGTH_SHORT).show()
             }
 
             override fun onLongClick(position: Int, dataObject: CarouselItem) {
@@ -118,7 +118,7 @@ class MainActivity : AppCompatActivity() {
         carousel4.carouselListener = object : CarouselListener {
             override fun onClick(position: Int, carouselItem: CarouselItem) {
                 //https://youtu.be/ZnarHv_Jx-M?t=953
-                Toast.makeText(this@MainActivity, "Coche: ${carouselItem.caption}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Taco Bell: ${carouselItem.caption}", Toast.LENGTH_SHORT).show()
             }
 
             override fun onLongClick(position: Int, dataObject: CarouselItem) {
@@ -139,10 +139,14 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val item_selected: Int = item.itemId
 
-        if (item_selected == R.id.item1) {
-            val loginIntent = Intent(this, Cuenta::class.java)
-            startActivity(loginIntent)
+        if (item_selected == R.id.cuenta_button) {
+            cambiarPantallaCuenta()
         }
         return super.onOptionsItemSelected(item)
+    }
+    //Cambiar a la pantalla Cuenta
+    fun cambiarPantallaCuenta(){
+        val loginIntent = Intent(this, Cuenta::class.java)
+        startActivity(loginIntent)
     }
 }
