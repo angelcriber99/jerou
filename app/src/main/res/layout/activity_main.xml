@@ -76,31 +76,35 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/BurgerBtn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="CambiarPantallaBurger"
                 app:srcCompat="@drawable/burgerking" />
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/McDonaldsBtn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="CambiarPantallaMcDonalds"
                 app:srcCompat="@drawable/mcdonalds" />
 
             <ImageView
-                android:id="@+id/imageView12"
+                android:id="@+id/KFCBtn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="CambiarPantallaKFC"
                 app:srcCompat="@drawable/kfc" />
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/TacoBellBtn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="CambiarPantallaTacoBell"
                 app:srcCompat="@drawable/tacobell" />
 
         </LinearLayout>

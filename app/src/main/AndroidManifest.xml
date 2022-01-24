@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Zaml">
         <activity
+            android:name=".TacoBell"
+            android:exported="false" />
+        <activity
+            android:name=".KFC"
+            android:exported="false" />
+        <activity
+            android:name=".McDonalds"
+            android:exported="false" />
+        <activity
+            android:name=".BurgerKing"
+            android:exported="false" />
+        <activity
             android:name=".Cuenta"
             android:exported="false" />
         <activity

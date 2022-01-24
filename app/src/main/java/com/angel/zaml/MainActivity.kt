@@ -149,4 +149,25 @@ class MainActivity : AppCompatActivity() {
         val loginIntent = Intent(this, Cuenta::class.java)
         startActivity(loginIntent)
     }
+
+    fun CambiarPantallaBurger(view: android.view.View) {
+        val loginIntent = Intent(this, BurgerKing::class.java)
+        startActivity(loginIntent)
+    }
+
+    fun CambiarPantallaMcDonalds(view: android.view.View) {
+        val loginIntent = Intent(this, McDonalds::class.java)
+        startActivity(loginIntent)
+    }
+    fun CambiarPantallaKFC(view: android.view.View) {
+        val loginIntent = Intent(this, KFC::class.java)
+        startActivity(loginIntent)
+    }
+
+    fun CambiarPantallaTacoBell(view: android.view.View) {
+        val loginIntent = Intent(this, TacoBell::class.java)
+        startActivity(loginIntent)
+    }
+
+
 }
