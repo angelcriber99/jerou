@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.angel.zaml">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_jerou_logo"
@@ -9,6 +11,9 @@
         android:roundIcon="@mipmap/ic_jerou_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zaml">
+        <activity
+            android:name=".MainActivityApi"
+            android:exported="false" />
         <activity
             android:name=".TacoBell"
             android:exported="false" />
