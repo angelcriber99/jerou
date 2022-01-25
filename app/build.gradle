@@ -64,4 +64,8 @@ dependencies {
     //Fin Carrousel
     //Telephone
     implementation 'com.google.android.gms:play-services-safetynet:17.0.0'
+
+    //Api
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-json:2.1.0'
 }
