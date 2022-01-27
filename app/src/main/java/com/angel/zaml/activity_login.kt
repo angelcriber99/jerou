@@ -102,6 +102,14 @@ class activity_login : AppCompatActivity() {
             signIn()
         }
     }
+    fun forgotPassword(view: View) {
+        startActivity(
+            Intent(
+                this,
+                ForgotPasswordActivity::class.java
+            )
+        )
+    }
 
     private fun showErrorGoogle() {
         val builder = AlertDialog.Builder(this)
