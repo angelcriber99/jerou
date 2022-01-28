@@ -134,6 +134,7 @@
         android:layout_height="48dp"
         android:onClick="forgotPassword"
         android:text="Recuperar la Contraseña"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.568"
