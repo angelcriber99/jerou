@@ -60,6 +60,7 @@
         app:layout_constraintVertical_bias="0.499"
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
+
     <Button
         android:id="@+id/registerEmailBtn"
         android:layout_width="wrap_content"
@@ -69,11 +70,10 @@
         android:text="Register with Email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintHorizontal_bias="0.572"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.629" />
-
+        app:layout_constraintVertical_bias="0.739" />
 
     <ImageView
         android:id="@+id/googleBtn"
@@ -98,7 +98,7 @@
         app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.772" />
+        app:layout_constraintVertical_bias="0.807" />
 
     <ImageView
         android:id="@+id/phoneRegisterBtn"
@@ -130,15 +130,16 @@
 
     <TextView
         android:id="@+id/txtForgotPassword"
-        android:layout_width="186dp"
+        android:layout_width="178dp"
         android:layout_height="48dp"
         android:onClick="forgotPassword"
-        android:text="Recuperar la Contraseña"
+        android:text="He olvidado mi contraseña"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerEmailBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintVertical_bias="0.143" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
