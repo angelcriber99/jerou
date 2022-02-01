@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item android:id="@+id/nav_item_one"
+        android:icon="@drawable/abc_vector_test"
+        android:title="Mapas"/>
+        <item android:id="@+id/nav_item_two"
+        android:icon="@drawable/abc_vector_test"
+        android:title="Página Web"/>
+        <item android:id="@+id/nav_item_three"
+        android:icon="@drawable/abc_vector_test"
+        android:title="Acerca de nosotros"/>
+    </group>
+
+</menu>
+
+

@@ -1,16 +1,25 @@
 package com.angel.zaml
 
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselListener
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
+
+    private lateinit var drawer: DrawerLayout
+    private lateinit var toggle: ActionBarDrawerToggle
+
     val list = mutableListOf<CarouselItem>()
     val list2 = mutableListOf<CarouselItem>()
     val list3 = mutableListOf<CarouselItem>()
@@ -128,6 +137,21 @@ class MainActivity : AppCompatActivity() {
         }
         //Fin de Carrousel 4
 
+        //Menu Lateral izquierda
+
+        val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar_main)
+        setSupportActionBar(toolbar)
+
+        drawer = findViewById(R.id.drawer_layout)
+
+        toggle = ActionBarDrawerToggle( this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        drawer.addDrawerListener(toggle)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeButtonEnabled(true)
+
+        val navigationView: NavigationView = findViewById(R.id.nav_view)
+        navigationView.setNavigationItemSelectedListener(this)
     }
     //esta funcion crea menu de los tres puntos
 
@@ -136,14 +160,14 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val item_selected: Int = item.itemId
+   // override fun onOptionsItemSelected(item: MenuItem): Boolean {
+   //     val item_selected: Int = item.itemId
 
-        if (item_selected == R.id.cuenta_button) {
-            cambiarPantallaCuenta()
-        }
-        return super.onOptionsItemSelected(item)
-    }
+    //    if (item_selected == R.id.cuenta_button) {
+    //        cambiarPantallaCuenta()
+    //    }
+    //    return super.onOptionsItemSelected(item)
+   // }
     //Cambiar a la pantalla Cuenta
     fun cambiarPantallaCuenta(){
         val loginIntent = Intent(this, Cuenta::class.java)
@@ -168,6 +192,33 @@ class MainActivity : AppCompatActivity() {
         val loginIntent = Intent(this, TacoBell::class.java)
         startActivity(loginIntent)
     }
+
+    //Menu Lateral izquierda
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_item_one -> Toast.makeText(this, "Mapas", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_two -> Toast.makeText( this, "Página Web", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_three -> Toast.makeText( this, "Acerca de nosotros", Toast.LENGTH_SHORT).show()
+        }
+        drawer.closeDrawer(GravityCompat.START)
+        return true
+    }
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
+        toggle. syncState()
+    }
+    override fun onConfigurationChanged (newConfig: Configuration) {
+        super.onConfigurationChanged (newConfig)
+        toggle.onConfigurationChanged (newConfig)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toggle.onOptionsItemSelected(item)) {
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 
 
 }
