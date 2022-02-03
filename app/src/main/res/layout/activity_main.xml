@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawer_layout"
     android:background="@drawable/fondo"
     tools:context=".MainActivity"
-    tools:openDrawer="start">
+    tools:openDrawer="start"
+    tools:visibility="visible">
 
 
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="gone" />
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
-        android:layout_height="match_parent"
         android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer"/>
+        app:menu="@menu/activity_main_drawer" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -35,60 +37,69 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="55dp"
+            android:paddingBottom="50dp">
 
-            <TextView
-                android:id="@+id/burguerKingTitle"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Burguer King" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-                android:id="@+id/carousel1"
-                android:layout_width="match_parent"
-                android:layout_height="150dp" />
+                <TextView
+                    android:id="@+id/burguerKingTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Burguer King" />
 
-            <TextView
-                android:id="@+id/mcDonaldsTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="McDonalds" />
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp" />
 
-            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-                android:id="@+id/carousel2"
-                android:layout_width="match_parent"
-                android:layout_height="150dp" />
+                <TextView
+                    android:id="@+id/mcDonaldsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="McDonalds" />
 
-            <TextView
-                android:id="@+id/kfcTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="KFC" />
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
 
-            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-                android:id="@+id/carousel3"
-                android:layout_width="match_parent"
-                android:layout_height="150dp" />
+                <TextView
+                    android:id="@+id/kfcTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="KFC" />
 
-            <TextView
-                android:id="@+id/tacoBellTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Taco Bell" />
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
 
-            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-                android:id="@+id/carousel4"
-                android:layout_width="match_parent"
-                android:layout_height="140dp" />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/tacoBellTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Taco Bell" />
+
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel4"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+        </ScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center|end"
+            android:layout_marginTop="-50dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -96,7 +107,6 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="CambiarPantallaBurger"
                 app:srcCompat="@drawable/burgerking" />
 
             <ImageView
@@ -104,7 +114,6 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="CambiarPantallaMcDonalds"
                 app:srcCompat="@drawable/mcdonalds" />
 
             <ImageView
@@ -112,7 +121,6 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="CambiarPantallaKFC"
                 app:srcCompat="@drawable/kfc" />
 
             <ImageView
@@ -120,8 +128,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="CambiarPantallaTacoBell"
-                app:srcCompat="@drawable/tacobell" />
+                app:srcCompat="@drawable/tacobell"/>
 
         </LinearLayout>
     </LinearLayout>

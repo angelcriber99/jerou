@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
@@ -152,6 +153,31 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
+
+        //Cambiar a pantalla burger king
+        val burgerKing:ImageView = findViewById(R.id.BurgerBtn)
+        burgerKing.setOnClickListener{
+            CambiarPantallaBurger();
+        }
+
+        //Cambiar a pantalla mcdonals
+        val mcDonalds:ImageView = findViewById(R.id.McDonaldsBtn)
+        mcDonalds.setOnClickListener{
+            CambiarPantallaMcDonalds();
+        }
+
+        //Cambiar a pantalla burger king
+        val KFC:ImageView = findViewById(R.id.KFCBtn)
+        KFC.setOnClickListener{
+            CambiarPantallaKFC();
+        }
+
+        //Cambiar a pantalla burger king
+        val tacoBell:ImageView = findViewById(R.id.TacoBellBtn)
+        tacoBell.setOnClickListener{
+            CambiarPantallaTacoBell();
+        }
+
     }
     //esta funcion crea menu de los tres puntos
 
@@ -174,21 +200,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         startActivity(loginIntent)
     }
 
-    fun CambiarPantallaBurger(view: android.view.View) {
-        val loginIntent = Intent(this, BurgerKing::class.java)
+    fun CambiarPantallaBurger() {
+        val loginIntent = Intent(this, MapsActivity::class.java)
         startActivity(loginIntent)
     }
 
-    fun CambiarPantallaMcDonalds(view: android.view.View) {
+    fun CambiarPantallaMcDonalds() {
         val loginIntent = Intent(this, McDonalds::class.java)
         startActivity(loginIntent)
     }
-    fun CambiarPantallaKFC(view: android.view.View) {
+    fun CambiarPantallaKFC() {
         val loginIntent = Intent(this, KFC::class.java)
         startActivity(loginIntent)
     }
 
-    fun CambiarPantallaTacoBell(view: android.view.View) {
+    fun CambiarPantallaTacoBell() {
         val loginIntent = Intent(this, TacoBell::class.java)
         startActivity(loginIntent)
     }
