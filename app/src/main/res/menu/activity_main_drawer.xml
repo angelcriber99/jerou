@@ -14,6 +14,7 @@
         android:title="Acerca de nosotros"/>
         <item
             android:id="@+id/nav_item_four"
+            android:icon="@drawable/abc_vector_test"
             android:title="Mi Cuenta" />
     </group>
 
