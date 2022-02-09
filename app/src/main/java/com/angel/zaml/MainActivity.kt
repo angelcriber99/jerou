@@ -201,7 +201,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     fun CambiarPantallaBurger() {
-        val loginIntent = Intent(this, MapsActivity::class.java)
+        val loginIntent = Intent(this, BurgerKing::class.java)
         startActivity(loginIntent)
     }
 
@@ -219,11 +219,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         startActivity(loginIntent)
     }
 
+    fun CambiarPantallaMapa() {
+        val loginIntent = Intent(this, MapsActivity::class.java)
+        startActivity(loginIntent)
+    }
+
     //Menu Lateral izquierda
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_item_one -> Toast.makeText(this, "Mapas", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_one -> CambiarPantallaMapa()
             R.id.nav_item_two -> Toast.makeText( this, "Página Web", Toast.LENGTH_SHORT).show()
             R.id.nav_item_three -> Toast.makeText( this, "Acerca de nosotros", Toast.LENGTH_SHORT).show()
         }
