@@ -17,12 +17,12 @@ class Splash : AppCompatActivity() {
 
         Handler().postDelayed({
             //Ver si esta inciada la sesion
-            var user = FirebaseAuth.getInstance().currentUser
-            if (user != null){
-                startActivity(Intent(this, MainActivity::class.java))
-            } else{
+         //   var user = FirebaseAuth.getInstance().currentUser
+         //   if (user != null){
+            //       startActivity(Intent(this, MainActivity::class.java))
+          //  } else{
                 startActivity(Intent(this, activity_login::class.java))
-            }
+         //   }
         },tiempo)
 
 
