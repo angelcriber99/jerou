@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group>
         <item android:id="@+id/nav_item_one"
@@ -11,6 +12,9 @@
         <item android:id="@+id/nav_item_three"
         android:icon="@drawable/abc_vector_test"
         android:title="Acerca de nosotros"/>
+        <item
+            android:id="@+id/nav_item_four"
+            android:title="Mi Cuenta" />
     </group>
 
 </menu>

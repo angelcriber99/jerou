@@ -166,13 +166,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             CambiarPantallaMcDonalds();
         }
 
-        //Cambiar a pantalla burger king
+        //Cambiar a pantalla KFC
         val KFC:ImageView = findViewById(R.id.KFCBtn)
         KFC.setOnClickListener{
             CambiarPantallaKFC();
         }
 
-        //Cambiar a pantalla burger king
+        //Cambiar a pantalla taco bell
         val tacoBell:ImageView = findViewById(R.id.TacoBellBtn)
         tacoBell.setOnClickListener{
             CambiarPantallaTacoBell();
@@ -226,6 +226,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_item_one -> Toast.makeText(this, "Mapas", Toast.LENGTH_SHORT).show()
             R.id.nav_item_two -> Toast.makeText( this, "Página Web", Toast.LENGTH_SHORT).show()
             R.id.nav_item_three -> Toast.makeText( this, "Acerca de nosotros", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_four -> Toast.makeText(this, "Mi Cuenta", Toast.LENGTH_SHORT).show()
         }
         drawer.closeDrawer(GravityCompat.START)
         return true
