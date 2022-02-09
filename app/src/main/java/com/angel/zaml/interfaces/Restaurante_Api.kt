@@ -15,6 +15,6 @@ interface Restaurante_Api {
 
     //open fun findPokemon(user: String?): Call
     fun findRestaurants(): retrofit.Callback<ArrayList<Result>>
-
+    //añadir array
 
 }
