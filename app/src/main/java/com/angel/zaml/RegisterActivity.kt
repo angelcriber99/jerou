@@ -22,10 +22,7 @@ class RegisterActivity : AppCompatActivity() {
 
         privacyPolicyText.movementMethod = LinkMovementMethod.getInstance()
 
-        val actionbar = supportActionBar
-        actionbar!!.title = "Registro con E-mail"
-        actionBar?.setDisplayHomeAsUpEnabled(true)
-        actionbar.setDisplayHomeAsUpEnabled(true)
+
     }
 
     //Flecha arriba izq para ir hacia atrás

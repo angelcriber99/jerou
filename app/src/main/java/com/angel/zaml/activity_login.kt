@@ -42,6 +42,7 @@ class activity_login : AppCompatActivity() {
             build()
         val gClient = GoogleSignIn.getClient(this,
             googleConf)
+
         val registerButton : ImageView =
             findViewById(R.id.googleBtn)
         registerButton.setOnClickListener{
@@ -49,6 +50,8 @@ class activity_login : AppCompatActivity() {
             val intent = gClient.signInIntent
             startActivityForResult(intent, 100)
         }
+
+
     }
 
     override fun onActivityResult(requestCode: Int,
@@ -86,7 +89,7 @@ class activity_login : AppCompatActivity() {
         startActivity(registerIntent)
 
         val myToast = Toast.makeText(
-            applicationContext, "Welcome to Jerou! :) " + Email.text.toString(),
+            applicationContext, "Welcome to Jerou! :) " + Email.toString(),
             Toast.LENGTH_SHORT
         )
         myToast.setGravity(Gravity.START, 200, 200)
@@ -126,15 +129,16 @@ class activity_login : AppCompatActivity() {
     fun onClickLogin(view: android.view.View) {
         //Esto de va a realizar cuando pulse el boton Next
         //Intent es una clase que recibe dos parametros, donde estamos y a donde vamos
+        var email= R.id.Email
+        var password=R.id.Password
 
-
-        if (Email.text != null && Password.text != null) {
+        if (email != null && Password != null) {
             //Comprobamos que los campos no son vacios
-            if (Email.text.toString() != "" && Password.text.toString() != "") {
+            if (Email.toString() != "" && Password.toString() != "") {
                 try {
                     FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                        Email.text.toString(),
-                        Password.text.toString()
+                        Email.toString(),
+                        Password.toString()
                     ).addOnCompleteListener {
                         if (it.isSuccessful) {
                             showLoginActivity()
@@ -150,8 +154,8 @@ class activity_login : AppCompatActivity() {
                     showError()
                 }
             }else{
-                val email = Email.text.toString()
-                val password = Password.text.toString()
+                val email = Email.toString()
+                val password = Password.toString()
                 if (email == "" || email ==null) {
                     val builder = AlertDialog.Builder(this)
                     builder.setTitle("Error")
@@ -173,7 +177,7 @@ class activity_login : AppCompatActivity() {
     }
 
     private fun showLoginActivity(){
-        val myToast = Toast.makeText(applicationContext,"Welcome "+Email.text.toString(), Toast.LENGTH_SHORT)
+        val myToast = Toast.makeText(applicationContext,"Welcome "+Email.toString(), Toast.LENGTH_SHORT)
         myToast.setGravity(Gravity.LEFT,200,200)
         myToast.show()
         val loginIntent = Intent(this, MainActivity::class.java)
