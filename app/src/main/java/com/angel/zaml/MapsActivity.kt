@@ -10,11 +10,19 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.angel.zaml.databinding.ActivityMapsBinding
+import com.angel.zaml.interfaces.Restaurante_Api
+import com.angel.zaml.models.Restaurante
+import com.angel.zaml.models.Result
+import retrofit.Callback
+import retrofit.GsonConverterFactory
+import retrofit.Retrofit
+import kotlin.collections.ArrayList
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
+    private lateinit var restaurants: ArrayList<Result>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,10 +47,33 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
+        //Marker of Zaragoza
+
 
         // Add a marker in Sydney and move the camera
         val sydney = LatLng(40.41, -3.7)
         mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Madrid"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+
+
     }
+    //Restaurantes
+    fun onLoad(){
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://www.zaragoza.es/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        //Tipo PokemonAPI
+        //Lo he cambiado a restaurantes
+        val restaurantApi = retrofit.create(Restaurante_Api::class.java)
+        //Tipo Call
+        val llamada = restaurantApi.findRestaurants()
+        restaurants.addAll(llamada)
+
+    }
+}
+
+private fun <E> ArrayList<E>.addAll(elements: Callback<ArrayList<E>>) {
+
 }
