@@ -5,5 +5,110 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".KFC">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="55dp"
+            android:paddingBottom="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/burguerKingTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Burguer King" />
+
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp" />
+
+                <TextView
+                    android:id="@+id/mcDonaldsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="McDonalds" />
+
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <TextView
+                    android:id="@+id/kfcTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="KFC" />
+
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel3"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <TextView
+                    android:id="@+id/tacoBellTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Taco Bell" />
+
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel4"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center|end"
+            android:layout_marginTop="-50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/BurgerBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/burgerking" />
+
+            <ImageView
+                android:id="@+id/McDonaldsBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/mcdonalds" />
+
+            <ImageView
+                android:id="@+id/KFCBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/kfc" />
+
+            <ImageView
+                android:id="@+id/TacoBellBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/tacobell"/>
+
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

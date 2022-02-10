@@ -43,14 +43,17 @@ class activity_login : AppCompatActivity() {
         val gClient = GoogleSignIn.getClient(this,
             googleConf)
 
-        val registerButton : ImageView =
-            findViewById(R.id.googleBtn)
+        val registerButton : ImageView = findViewById(R.id.googleBtn)
         registerButton.setOnClickListener{
             gClient.signOut()
             val intent = gClient.signInIntent
             startActivityForResult(intent, 100)
         }
 
+        val phoneRegisterBtn : ImageView = findViewById(R.id.phoneRegisterBtn)
+        phoneRegisterBtn.setOnClickListener{
+            CambiarPantallaTelefono()
+        }
 
     }
 
@@ -132,13 +135,13 @@ class activity_login : AppCompatActivity() {
         var email= R.id.Email
         var password=R.id.Password
 
-        if (email != null && Password != null) {
+        if (email != null && password != null) {
             //Comprobamos que los campos no son vacios
-            if (Email.toString() != "" && Password.toString() != "") {
+            if (email.toString() != "" && password.toString() != "") {
                 try {
                     FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                        Email.toString(),
-                        Password.toString()
+                        email.toString(),
+                        password.toString()
                     ).addOnCompleteListener {
                         if (it.isSuccessful) {
                             showLoginActivity()
@@ -203,7 +206,7 @@ class activity_login : AppCompatActivity() {
     }
 
     //Registro telefono
-    fun CambiarPantallaTelefono(view: View){
+    fun CambiarPantallaTelefono() {
         var loginIntent = Intent(this, PhoneRegister::class.java)
         //Empezamos el intento
         startActivity(loginIntent)

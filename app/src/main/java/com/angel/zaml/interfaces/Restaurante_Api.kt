@@ -1,11 +1,10 @@
 package com.angel.zaml.interfaces
 
-import android.telecom.Call
+import retrofit.Call
 import com.angel.zaml.models.Restaurante
 import com.angel.zaml.models.Result
 import retrofit.http.GET
 import retrofit.http.Headers
-import javax.security.auth.callback.Callback
 
 //Llamadas para la API
 interface Restaurante_Api {
@@ -14,7 +13,7 @@ interface Restaurante_Api {
     @Headers("Accept: application/json")
 
     //open fun findPokemon(user: String?): Call
-    fun findRestaurants(): retrofit.Callback<ArrayList<Result>>
+    fun findRestaurants(): Call<Result>
     //añadir array
 
 }

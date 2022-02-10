@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class BurgerKing : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +22,14 @@ class BurgerKing : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val item_selected: Int = item.itemId
 
-        if (item_selected == R.id.cuenta_button) {
+        if (item_selected == R.id.item1) {
             cambiarPantallaCuenta()
+        }
+
+        if (item_selected == R.id.item2) {
+            Firebase.auth.signOut()
+            val loginIntent = Intent(this, activity_login::class.java)
+            startActivity(loginIntent)
         }
         return super.onOptionsItemSelected(item)
     }

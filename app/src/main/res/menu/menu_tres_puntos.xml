@@ -3,6 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/cuenta_button"
+        android:id="@+id/item1"
         android:title="Cuenta" />
+    <item
+        android:id="@+id/item2"
+        android:title="Mapas" />
+    <item
+        android:id="@+id/item3"
+        android:title="Cerrar Cuenta" />
 </menu>

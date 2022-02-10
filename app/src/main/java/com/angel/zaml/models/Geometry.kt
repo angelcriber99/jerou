@@ -1,23 +1,9 @@
 package com.angel.zaml.models
 
-class Geometry {
+import java.math.BigDecimal
+import kotlin.properties.Delegates
 
-    private lateinit var lat: String
-    private lateinit var long: String
-
-    fun getLat(): String? {
-        return lat
-    }
-
-    fun setLat(lat: String?) {
-        this.lat = lat!!
-    }
-
-    fun getLong(): String? {
-        return long
-    }
-
-    fun setLong(lat: String?) {
-        this.long = lat!!
-    }
-}
+class Geometry (
+    var lat : Long,
+    var long : Long
+)

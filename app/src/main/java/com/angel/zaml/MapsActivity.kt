@@ -2,6 +2,7 @@ package com.angel.zaml
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -13,8 +14,10 @@ import com.angel.zaml.databinding.ActivityMapsBinding
 import com.angel.zaml.interfaces.Restaurante_Api
 import com.angel.zaml.models.Restaurante
 import com.angel.zaml.models.Result
+import com.google.gson.Gson
 import retrofit.Callback
 import retrofit.GsonConverterFactory
+import retrofit.Response
 import retrofit.Retrofit
 import kotlin.collections.ArrayList
 
@@ -30,10 +33,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        onLoad()
     }
 
     /**
@@ -69,11 +75,29 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val restaurantApi = retrofit.create(Restaurante_Api::class.java)
         //Tipo Call
         val llamada = restaurantApi.findRestaurants()
-        restaurants.addAll(llamada)
 
+        llamada.enqueue(
+            object : Callback<Result>{
+                override fun onResponse(response: Response<Result>?, retrofit: Retrofit?) {
+                    val restaurantes : Result? = response?.body()
+
+                    val arrayRestaurantes = restaurantes?.getResult()
+
+                    if(arrayRestaurantes!=null)
+                        for(num in 0 until (arrayRestaurantes.size)){
+
+
+                            Log.i("PRUEBA : ", Gson().toJson(arrayRestaurantes.get(num).getTitle()))
+                            Log.i("---- : ", Gson().toJson(arrayRestaurantes.get(num).getGeometry().lat))
+                            Log.i("---- : ", Gson().toJson(arrayRestaurantes.get(num).getGeometry().long))
+                        }
+                }
+
+                override fun onFailure(t: Throwable?) {
+
+                }
+
+            }
+        )
     }
-}
-
-private fun <E> ArrayList<E>.addAll(elements: Callback<ArrayList<E>>) {
-
 }

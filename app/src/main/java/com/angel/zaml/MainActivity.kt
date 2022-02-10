@@ -12,6 +12,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselListener
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
@@ -138,22 +140,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         //Fin de Carrousel 4
 
-        //Menu Lateral izquierda
 
-        val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar_main)
-        setSupportActionBar(toolbar)
-
-        drawer = findViewById(R.id.drawer_layout)
-
-        toggle = ActionBarDrawerToggle( this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawer.addDrawerListener(toggle)
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeButtonEnabled(true)
-
-        val navigationView: NavigationView = findViewById(R.id.nav_view)
-        navigationView.setNavigationItemSelectedListener(this)
-
+        //Listener del menu
         //Cambiar a pantalla burger king
         val burgerKing:ImageView = findViewById(R.id.BurgerBtn)
         burgerKing.setOnClickListener{
@@ -177,7 +165,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         tacoBell.setOnClickListener{
             CambiarPantallaTacoBell();
         }
-
+        
+        
     }
     //esta funcion crea menu de los tres puntos
 
@@ -186,14 +175,29 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-   // override fun onOptionsItemSelected(item: MenuItem): Boolean {
-   //     val item_selected: Int = item.itemId
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val item_selected: Int = item.itemId
 
-    //    if (item_selected == R.id.cuenta_button) {
-    //        cambiarPantallaCuenta()
-    //    }
-    //    return super.onOptionsItemSelected(item)
-   // }
+        if (item_selected == R.id.item1) {
+            cambiarPantallaCuenta()
+        }
+
+        if (item_selected == R.id.item2) {
+            Firebase.auth.signOut()
+            val loginIntent = Intent(this, MapsActivity::class.java)
+            startActivity(loginIntent)
+        }
+        if (item_selected == R.id.item3) {
+            Firebase.auth.signOut()
+            val loginIntent = Intent(this, activity_login::class.java)
+            startActivity(loginIntent)
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
+
+
     //Cambiar a la pantalla Cuenta
     fun cambiarPantallaCuenta(){
         val loginIntent = Intent(this, Cuenta::class.java)
@@ -224,33 +228,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         startActivity(loginIntent)
     }
 
-    //Menu Lateral izquierda
-
+    //No vale para nada
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.nav_item_one -> CambiarPantallaMapa()
-            R.id.nav_item_two -> Toast.makeText( this, "Página Web", Toast.LENGTH_SHORT).show()
-            R.id.nav_item_three -> Toast.makeText( this, "Acerca de nosotros", Toast.LENGTH_SHORT).show()
-            R.id.nav_item_four -> Toast.makeText(this, "Mi Cuenta", Toast.LENGTH_SHORT).show()
-        }
-        drawer.closeDrawer(GravityCompat.START)
-        return true
+        TODO("Not yet implemented")
     }
-    override fun onPostCreate(savedInstanceState: Bundle?) {
-        super.onPostCreate(savedInstanceState)
-        toggle. syncState()
-    }
-    override fun onConfigurationChanged (newConfig: Configuration) {
-        super.onConfigurationChanged (newConfig)
-        toggle.onConfigurationChanged (newConfig)
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (toggle.onOptionsItemSelected(item)) {
-            return true
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-
 
 }
+
