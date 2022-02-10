@@ -34,21 +34,21 @@ class Splash : AppCompatActivity() {
         val background = object : Thread(){
             override fun run() {
                 super.run()
-
                 try {
-
                     Thread.sleep((3*1000).toLong())
-
-                    val i = Intent(baseContext,activity_login::class.java)
-                    startActivity(i)
-
+                    var user = FirebaseAuth.getInstance().currentUser
+                        if (user != null){
+                            val i = Intent(baseContext,MainActivity::class.java)
+                            startActivity(i)
+                      } else {
+                            val i = Intent(baseContext, activity_login::class.java)
+                            startActivity(i)
+                        }
                 }catch (e : Exception){
                     e.printStackTrace()
                 }
-
             }
         }
-
         background.start()
 
 
@@ -58,7 +58,7 @@ class Splash : AppCompatActivity() {
 
 
 
-
+        /*
         Handler().postDelayed({
             //Ver si esta inciada la sesion
          //   var user = FirebaseAuth.getInstance().currentUser
@@ -68,7 +68,7 @@ class Splash : AppCompatActivity() {
                 startActivity(Intent(this, activity_login::class.java))
          //   }
         },tiempo)
-
+        */
 
     }
 }
