@@ -15,11 +15,10 @@
 
         <ImageView
             android:id="@+id/iconTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:background="#32FFFFFF"
             android:src="@drawable/telephone_49" />
 
         <!-- 1) For Phone Number Input -->
@@ -32,21 +31,22 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 style="@style/TextAppearance.MaterialComponents.Subtitle1"
-                android:layout_marginTop="10dp"
-                android:textAlignment="center"
-                android:text="Phone number:"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Phone number:"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
                 style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Please enter your Phone number to continue"
                 android:textAlignment="center"
-                android:textColor="#ffffff"/>
+                android:textColor="#000000" />
 
             <EditText
                 android:id="@+id/phoneEt"
@@ -57,11 +57,10 @@
                 android:hint="+34 xxxxxxxxx"
                 android:inputType="phone"
                 android:minHeight="48dp"
-                android:textColor="@color/white"
-                android:textColorHint="#A8FFFFFF"
                 android:padding="10dp"
                 android:textAlignment="center"
-                />
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
 
             <Button
                 android:id="@+id/phoneContinueBtn"
@@ -90,7 +89,7 @@
                 android:background="#4F000000"
                 android:text="Verification code:"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <TextView
@@ -101,7 +100,7 @@
                 android:background="#4F000000"
                 android:text="Please enter your Verification Code was sent to your mobile phone"
                 android:textAlignment="center"
-                android:textColor="#ffffff" />
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/CodeEt"
@@ -127,7 +126,7 @@
                 android:padding="5dp"
                 android:text="@string/didn_t_get_otp_resend"
                 android:textAlignment="center"
-                android:textColor="#fff" />
+                android:textColor="@color/black" />
 
 
             <Button
