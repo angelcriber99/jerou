@@ -188,8 +188,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             startActivity(loginIntent)
         }
         if (item_selected == R.id.item3) {
-            Firebase.auth.signOut()
-            val loginIntent = Intent(this, activity_login::class.java)
+            val loginIntent = Intent(this, Carrito::class.java)
             startActivity(loginIntent)
         }
         return super.onOptionsItemSelected(item)

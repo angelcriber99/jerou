@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_jerou_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zaml">
-
+        <activity
+            android:name=".Carrito"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
