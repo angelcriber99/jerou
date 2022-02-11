@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="didn_t_get_otp_resend" />
+    <string name="didn_t_get_otp_resend">Did not get otp resend?</string>
 </resources>

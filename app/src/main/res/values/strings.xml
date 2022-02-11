@@ -24,7 +24,8 @@
     <string name="jerou">Jerou</string>
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>
-    <string name="didn_t_get_otp_resend" />
+    <string name="didn_t_get_otp_resend">Did not get otp resend?</string>
+
 
 
 </resources>
