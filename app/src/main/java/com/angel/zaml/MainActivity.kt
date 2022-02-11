@@ -194,9 +194,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return super.onOptionsItemSelected(item)
     }
 
-
-
-
     //Cambiar a la pantalla Cuenta
     fun cambiarPantallaCuenta(){
         val loginIntent = Intent(this, Cuenta::class.java)
