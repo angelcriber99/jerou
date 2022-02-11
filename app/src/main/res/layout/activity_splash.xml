@@ -33,9 +33,10 @@
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="WELCOME TO MY APP"
+                android:layout_width="170dp"
+                android:layout_height="31dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="JEROU APP"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -44,21 +45,7 @@
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.682" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LOS ZAMLS"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.381" />
+                app:layout_constraintVertical_bias="0.403" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -68,7 +55,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.54"
+                app:layout_constraintVertical_bias="0.577"
                 app:srcCompat="@drawable/logo_redondo" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
