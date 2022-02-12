@@ -1,2 +1,2 @@
 Sacar SHA1 y SHA256 Android estudio, poner este comando en el CMD
-keytool -list -v -keystore "C:\Users\yourname\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+keytool -list -v -keystore "C:\Users\%username%\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
