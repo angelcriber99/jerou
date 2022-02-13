@@ -19,8 +19,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="55dp"
-            android:paddingBottom="50dp">
+            android:layout_marginBottom="50dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -28,10 +27,10 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/burguerKingTitle"
+                    android:id="@+id/KFCHamburguesas"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Burguer King" />
+                    android:text="Hamburguesas" />
 
                 <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                     android:id="@+id/carousel1"
@@ -39,10 +38,10 @@
                     android:layout_height="200dp" />
 
                 <TextView
-                    android:id="@+id/mcDonaldsTitle"
+                    android:id="@+id/KFCMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="McDonalds" />
+                    android:text="Menu para 2 personas" />
 
                 <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                     android:id="@+id/carousel2"
@@ -50,26 +49,16 @@
                     android:layout_height="200dp" />
 
                 <TextView
-                    android:id="@+id/kfcTitle"
+                    android:id="@+id/KFCComplementos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="KFC" />
+                    android:text="Complementos" />
 
                 <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                     android:id="@+id/carousel3"
                     android:layout_width="match_parent"
                     android:layout_height="200dp" />
 
-                <TextView
-                    android:id="@+id/tacoBellTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Taco Bell" />
-
-                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-                    android:id="@+id/carousel4"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp" />
             </LinearLayout>
         </ScrollView>
 

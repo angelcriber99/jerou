@@ -183,7 +183,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         if (item_selected == R.id.item2) {
-            Firebase.auth.signOut()
             val loginIntent = Intent(this, MapsActivity::class.java)
             startActivity(loginIntent)
         }
