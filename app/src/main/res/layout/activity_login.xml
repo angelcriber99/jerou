@@ -10,8 +10,8 @@
 
     <EditText
         android:id="@+id/Email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="309dp"
+        android:layout_height="50dp"
         android:background="#4B000000"
         android:ems="10"
         android:hint="Email"
@@ -22,15 +22,14 @@
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317" />
+        app:layout_constraintVertical_bias="0.356" />
 
     <EditText
         android:id="@+id/Password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="311dp"
+        android:layout_height="47dp"
         android:background="#4B000000"
         android:ems="10"
         android:hint="Password"
@@ -41,10 +40,10 @@
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.427" />
+        app:layout_constraintVertical_bias="0.467"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/login"
@@ -52,13 +51,13 @@
         android:layout_height="wrap_content"
         android:background="#E53935"
         android:onClick="onClickLogin"
-        android:text="Login"
+        android:text="INICIAR SESION"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.528"
+        app:layout_constraintVertical_bias="0.628"
         tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
     <Button
@@ -70,9 +69,10 @@
         android:text="REGISTRARSE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.629" />
+        app:layout_constraintVertical_bias="0.628" />
 
     <ImageView
         android:id="@+id/googleBtn"
@@ -84,60 +84,60 @@
         app:layout_constraintHorizontal_bias="0.314"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.892"
+        app:layout_constraintVertical_bias="0.926"
         app:srcCompat="@drawable/icono_logo_de_google_480" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="También puedes registrarte con:"
+        android:text="O continua con:"
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.837" />
 
     <ImageView
         android:id="@+id/phoneRegisterBtn"
-        android:layout_width="64dp"
+        android:layout_width="57dp"
         android:layout_height="48dp"
+        android:onClick="CambiarPantallaTelefono"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.628"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893"
+        app:layout_constraintVertical_bias="0.923"
         app:srcCompat="@drawable/telephone_49"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/txtForgotPassword"
         android:layout_width="207dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:onClick="forgotPassword"
         android:text="He olvidado mi contraseña?"
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login"
-        app:layout_constraintVertical_bias="0.757"
+        app:layout_constraintVertical_bias="0.482"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:id="@+id/imageView2"
+        android:layout_width="207dp"
+        android:layout_height="129dp"
         app:layout_constraintBottom_toTopOf="@+id/Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6"
         app:srcCompat="@drawable/logo_transparente" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
