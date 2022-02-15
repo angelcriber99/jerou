@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Jerou App</string>
+    <string name="app_name">Jerou Comida Rapida</string>
     <string name="title_activity_menu_tres_puntos">MenuTresPuntos</string>
 
     <!-- Preference Titles -->
