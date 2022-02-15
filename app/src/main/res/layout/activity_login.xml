@@ -47,11 +47,11 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#E53935"
+        android:layout_width="154dp"
+        android:layout_height="59dp"
         android:onClick="onClickLogin"
         android:text="INICIAR SESION"
+        app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.191"
@@ -62,17 +62,17 @@
 
     <Button
         android:id="@+id/registerEmailBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#292425"
+        android:layout_width="149dp"
+        android:layout_height="59dp"
         android:onClick="CambiarPantallaRegistro"
         android:text="REGISTRARSE"
+        app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.628" />
+        app:layout_constraintVertical_bias="0.627" />
 
     <ImageView
         android:id="@+id/googleBtn"
