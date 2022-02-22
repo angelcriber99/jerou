@@ -16,6 +16,7 @@ class McDonalds : AppCompatActivity() {
     val list = mutableListOf<CarouselItem>()
     val list2 = mutableListOf<CarouselItem>()
     val list3 = mutableListOf<CarouselItem>()
+    val list4 = mutableListOf<CarouselItem>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
