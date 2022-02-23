@@ -183,8 +183,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         if (item_selected == R.id.item2) {
-            val loginIntent = Intent(this, MapsActivity::class.java)
-            startActivity(loginIntent)
+            CambiarPantallaMapa()
         }
         if (item_selected == R.id.item3) {
             val loginIntent = Intent(this, Carrito::class.java)
