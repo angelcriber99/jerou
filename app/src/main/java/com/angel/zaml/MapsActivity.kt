@@ -55,6 +55,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         //Marker of Zaragoza
 
 
+
         // Add a marker in Sydney and move the camera
         val sydney = LatLng(40.41, -3.7)
         mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Madrid"))

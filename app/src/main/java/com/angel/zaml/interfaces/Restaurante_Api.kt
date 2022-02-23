@@ -9,7 +9,7 @@ import retrofit.http.Headers
 //Llamadas para la API
 interface Restaurante_Api {
     //@GET("pokeapi.co/api/v2/")
-    @GET("sede/servicio/restaurante.json?fl=title,geometry&srsname=wsg84&rows=1")
+    @GET("sede/servicio/restaurante.json?fl=title,geometry&srsname=wsg84&rows=10")
     @Headers("Accept: application/json")
 
     //open fun findPokemon(user: String?): Call
