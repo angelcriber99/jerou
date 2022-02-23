@@ -12,7 +12,6 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.angel.zaml.databinding.ActivityMapsBinding
 import com.angel.zaml.interfaces.Restaurante_Api
-import com.angel.zaml.models.Restaurante
 import com.angel.zaml.models.Result
 import com.google.gson.Gson
 import retrofit.Callback
@@ -88,8 +87,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
                             Log.i("PRUEBA : ", Gson().toJson(arrayRestaurantes.get(num).getTitle()))
-                            Log.i("---- : ", Gson().toJson(arrayRestaurantes.get(num).getGeometry().lat))
-                            Log.i("---- : ", Gson().toJson(arrayRestaurantes.get(num).getGeometry().long))
+                            Log.i("---- : ", Gson().toJson(
+                                arrayRestaurantes.get(num).getGeometry().getCoordinates()!!.get(0)))
+                            Log.i("---- : ", Gson().toJson(arrayRestaurantes.get(num).getGeometry().getCoordinates()!!.get(1)))
                         }
                 }
 
