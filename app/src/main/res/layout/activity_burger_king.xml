@@ -71,6 +71,17 @@
                     android:id="@+id/carousel4"
                     android:layout_width="match_parent"
                     android:layout_height="200dp" />
+
+                <TextView
+                    android:id="@+id/carrousel5Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Taco Bell" />
+
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel5"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
             </LinearLayout>
         </ScrollView>
 
