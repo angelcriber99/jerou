@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.Toast
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -197,6 +198,30 @@ class BurgerKing : AppCompatActivity() {
         //Fin de Carrousel 5
         //------------------------------------------------------------------------------------------------------------------------------
 
+        //Listener del menu
+        //Cambiar a pantalla burger king
+        val burgerKing: ImageView = findViewById(R.id.BurgerBtn)
+        burgerKing.setOnClickListener{
+            CambiarPantallaBurger();
+        }
+
+        //Cambiar a pantalla mcdonals
+        val mcDonalds: ImageView = findViewById(R.id.McDonaldsBtn)
+        mcDonalds.setOnClickListener{
+            CambiarPantallaMcDonalds();
+        }
+
+        //Cambiar a pantalla KFC
+        val KFC: ImageView = findViewById(R.id.KFCBtn)
+        KFC.setOnClickListener{
+            CambiarPantallaKFC();
+        }
+
+        //Cambiar a pantalla taco bell
+        val tacoBell: ImageView = findViewById(R.id.TacoBellBtn)
+        tacoBell.setOnClickListener{
+            CambiarPantallaTacoBell();
+        }
     }
 
 
@@ -220,9 +245,33 @@ class BurgerKing : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    //Cambiar a la pantalla Cuenta
-    fun cambiarPantallaCuenta() {
+    fun cambiarPantallaCuenta(){
         val loginIntent = Intent(this, Cuenta::class.java)
+        startActivity(loginIntent)
+    }
+
+
+    fun CambiarPantallaBurger() {
+        val loginIntent = Intent(this, BurgerKing::class.java)
+        startActivity(loginIntent)
+    }
+
+    fun CambiarPantallaMcDonalds() {
+        val loginIntent = Intent(this, McDonalds::class.java)
+        startActivity(loginIntent)
+    }
+    fun CambiarPantallaKFC() {
+        val loginIntent = Intent(this, KFC::class.java)
+        startActivity(loginIntent)
+    }
+
+    fun CambiarPantallaTacoBell() {
+        val loginIntent = Intent(this, TacoBell::class.java)
+        startActivity(loginIntent)
+    }
+
+    fun CambiarPantallaMapa() {
+        val loginIntent = Intent(this, MapsActivity::class.java)
         startActivity(loginIntent)
     }
 }
