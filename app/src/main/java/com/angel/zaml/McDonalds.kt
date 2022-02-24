@@ -53,11 +53,11 @@ class McDonalds : AppCompatActivity() {
         //Find carrousel id
         val carrousel2: ImageCarousel = findViewById(R.id.carousel2)
         //Add content to the array
-        list.add(CarouselItem(R.drawable.mc_american_style_chicken, "American Style Chicken"))
-        list.add(CarouselItem(R.drawable.chicken_buffalo, "American_Style Chicken Buffalo"))
-        list.add(CarouselItem(R.drawable.honey_mustard, "American Style Chicken honey_mustard"))
+        list2.add(CarouselItem(R.drawable.mc_american_style_chicken, "American Style Chicken"))
+        list2.add(CarouselItem(R.drawable.chicken_buffalo, "American_Style Chicken Buffalo"))
+        list2.add(CarouselItem(R.drawable.honey_mustard, "American Style Chicken honey_mustard"))
         //Add photos to the carrousel
-        carrousel2.addData(list)
+        carrousel2.addData(list2)
         // Carousel listener
         carrousel2.carouselListener = object : CarouselListener {
             override fun onClick(position: Int, carouselItem: CarouselItem) {
@@ -79,13 +79,13 @@ class McDonalds : AppCompatActivity() {
         // Find carrousel id
         val carrousel3: ImageCarousel = findViewById(R.id.carousel3)
         //Add content to the array
-        list.add(CarouselItem(R.drawable.gr_extreme, "Gran McExtreme de McDonald´s"))
-        list.add(CarouselItem(R.drawable.gr_nachos, "Gran McExtreme de McDonald´s Nachos "))
-        list.add(CarouselItem(R.drawable.gr_nachos_doble, "Gran McExtreme de McDonald´s Nachos Doble"))
-        list.add(CarouselItem(R.drawable.gr_bacon, "Gran_McExtreme de McDonald´s Bacon"))
-        list.add(CarouselItem(R.drawable.gr_bacon_doble, "Gran McExtreme de McDonald´s Doble"))
+        list3.add(CarouselItem(R.drawable.gr_extreme, "Gran McExtreme de McDonald´s"))
+        list3.add(CarouselItem(R.drawable.gr_nachos, "Gran McExtreme de McDonald´s Nachos "))
+        list3.add(CarouselItem(R.drawable.gr_nachos_doble, "Gran McExtreme de McDonald´s Nachos Doble"))
+        list3.add(CarouselItem(R.drawable.gr_bacon, "Gran_McExtreme de McDonald´s Bacon"))
+        list3.add(CarouselItem(R.drawable.gr_bacon_doble, "Gran McExtreme de McDonald´s Doble"))
         //Add photos to the carrousel
-        carrousel3.addData(list)
+        carrousel3.addData(list3)
         // Carousel listener
         carrousel3.carouselListener = object : CarouselListener {
             override fun onClick(position: Int, carouselItem: CarouselItem) {
@@ -108,23 +108,23 @@ class McDonalds : AppCompatActivity() {
         // Find carrousel id
         val carrousel4: ImageCarousel = findViewById(R.id.carousel4)
         //Add content to the array
-        list.add(CarouselItem(R.drawable.postres_helados, "Postres y helados"))
-        list.add(CarouselItem(R.drawable.mcflurry_su_cho_ne, "McFlurry Suchard Chocolate Negro "))
-        list.add(CarouselItem(R.drawable.mcflurry_su_cho_bl, "McFlurry Suchard Chocolate Blanco"))
-        list.add(CarouselItem(R.drawable.mcflurry_con_cho_le, "McFlurry Conguitos Chocolate con Leche"))
-        list.add(CarouselItem(R.drawable.mcflurry_con_cho_bl, "McFlurry Conguitos Chocolate Blanco"))
-        list.add(CarouselItem(R.drawable.mcflurry_kitkat, "McFlurry KitKat "))
-        list.add(CarouselItem(R.drawable.mcflurry_oreo, "McFlurry Oreo"))
-        list.add(CarouselItem(R.drawable.mcflurry_oreo_cho_bl, "McFlurry Oreo Chocolate Blanco "))
-        list.add(CarouselItem(R.drawable.apple_pie, "Apple Pie"))
-        list.add(CarouselItem(R.drawable.cono_helado, "Cono de helado "))
-        list.add(CarouselItem(R.drawable.sun_choco, "Sundae Chocolate "))
-        list.add(CarouselItem(R.drawable.sun_cara, "Sundae Caramelo "))
-        list.add(CarouselItem(R.drawable.sun_fresa, "Sundae Fresa"))
-        list.add(CarouselItem(R.drawable.sun_cho_bl, "Sundae Chocolate Blanco"))
+        list4.add(CarouselItem(R.drawable.postres_helados, "Postres y helados"))
+        list4.add(CarouselItem(R.drawable.mcflurry_su_cho_ne, "McFlurry Suchard Chocolate Negro "))
+        list4.add(CarouselItem(R.drawable.mcflurry_su_cho_bl, "McFlurry Suchard Chocolate Blanco"))
+        list4.add(CarouselItem(R.drawable.mcflurry_con_cho_le, "McFlurry Conguitos Chocolate con Leche"))
+        list4.add(CarouselItem(R.drawable.mcflurry_con_cho_bl, "McFlurry Conguitos Chocolate Blanco"))
+        list4.add(CarouselItem(R.drawable.mcflurry_kitkat, "McFlurry KitKat "))
+        list4.add(CarouselItem(R.drawable.mcflurry_oreo, "McFlurry Oreo"))
+        list4.add(CarouselItem(R.drawable.mcflurry_oreo_cho_bl, "McFlurry Oreo Chocolate Blanco "))
+        list4.add(CarouselItem(R.drawable.apple_pie, "Apple Pie"))
+        list4.add(CarouselItem(R.drawable.cono_helado, "Cono de helado "))
+        list4.add(CarouselItem(R.drawable.sun_choco, "Sundae Chocolate "))
+        list4.add(CarouselItem(R.drawable.sun_cara, "Sundae Caramelo "))
+        list4.add(CarouselItem(R.drawable.sun_fresa, "Sundae Fresa"))
+        list4.add(CarouselItem(R.drawable.sun_cho_bl, "Sundae Chocolate Blanco"))
 
         //Add photos to the carrousel
-        carrousel4.addData(list)
+        carrousel4.addData(list4)
 
         // Carousel listener
         carrousel4.carouselListener = object : CarouselListener {
