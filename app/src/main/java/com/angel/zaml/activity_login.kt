@@ -92,7 +92,7 @@ class activity_login : AppCompatActivity() {
         startActivity(registerIntent)
 
         val myToast = Toast.makeText(
-            applicationContext, "Welcome to Jerou! :) " + Email.toString(),
+            applicationContext, "Bienvenido a Jerou! :) ",
             Toast.LENGTH_SHORT
         )
         myToast.setGravity(Gravity.START, 200, 200)
@@ -119,9 +119,9 @@ class activity_login : AppCompatActivity() {
 
     private fun showErrorGoogle() {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Failed Login In with Google")
-        builder.setMessage("Please, try again")
-        builder.setPositiveButton("Accept", null)
+        builder.setTitle("Error al loguearse con Google")
+        builder.setMessage("Por favor, inténtelo de nuevo")
+        builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
@@ -162,7 +162,7 @@ class activity_login : AppCompatActivity() {
                 if (email == "" || email ==null) {
                     val builder = AlertDialog.Builder(this)
                     builder.setTitle("Error")
-                    builder.setMessage("Email is empty. You must enter an email")
+                    builder.setMessage("Debes ingresar un email")
                     builder.setPositiveButton("OK", null)
                     val dialog: AlertDialog = builder.create()
                     dialog.show()
@@ -170,7 +170,7 @@ class activity_login : AppCompatActivity() {
                 if (password == "" || password ==null || password.length<6) {
                     val builder = AlertDialog.Builder(this)
                     builder.setTitle("Error")
-                    builder.setMessage("Password is empty or it is invalid. You must enter a password with more than 6 characters")
+                    builder.setMessage("La contraseña es inválida o está vacía. Debe contener mínimo 6 caracteres.")
                     builder.setPositiveButton("OK", null)
                     val dialog: AlertDialog = builder.create()
                     dialog.show()
@@ -180,7 +180,7 @@ class activity_login : AppCompatActivity() {
     }
 
     private fun showLoginActivity(){
-        val myToast = Toast.makeText(applicationContext,"Welcome "+Email.toString(), Toast.LENGTH_SHORT)
+        val myToast = Toast.makeText(applicationContext,"¡Bienvenido! ", Toast.LENGTH_SHORT)
         myToast.setGravity(Gravity.LEFT,200,200)
         myToast.show()
         val loginIntent = Intent(this, MainActivity::class.java)
@@ -191,7 +191,7 @@ class activity_login : AppCompatActivity() {
     private fun showError(){
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
-        builder.setMessage("An error with Firebase has occured")
+        builder.setMessage("Error de Firebase")
         builder.setPositiveButton("OK", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
