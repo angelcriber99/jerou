@@ -92,7 +92,7 @@ class activity_login : AppCompatActivity() {
         startActivity(registerIntent)
 
         val myToast = Toast.makeText(
-            applicationContext, "Bienvenido a Jerou! :) ",
+            applicationContext, "¡Bienvenid@ a Jerou! ",
             Toast.LENGTH_SHORT
         )
         myToast.setGravity(Gravity.START, 200, 200)
