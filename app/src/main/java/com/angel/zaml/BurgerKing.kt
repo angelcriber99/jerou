@@ -187,10 +187,7 @@ class BurgerKing : AppCompatActivity() {
 
             }
 
-            override fun onLongClick(
-                position: Int,
-                dataObject: CarouselItem
-            ) {
+            override fun onLongClick(position: Int, dataObject: CarouselItem) {
                 // ...
 
             }

@@ -32,7 +32,7 @@
                     android:id="@+id/burguerKingTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Burguer King" />
+                    android:text="Menú Parilla" />
 
                 <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                     android:id="@+id/carousel1"
@@ -43,7 +43,7 @@
                     android:id="@+id/mcDonaldsTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="McDonalds" />
+                    android:text="Menú Pollo" />
 
                 <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                     android:id="@+id/carousel2"
@@ -54,7 +54,7 @@
                     android:id="@+id/kfcTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="KFC" />
+                    android:text="Hamburguesas" />
 
                 <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                     android:id="@+id/carousel3"
@@ -65,7 +65,7 @@
                     android:id="@+id/tacoBellTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Taco Bell" />
+                    android:text="Postres" />
 
                 <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                     android:id="@+id/carousel4"
@@ -76,7 +76,7 @@
                     android:id="@+id/carrousel5Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Taco Bell" />
+                    android:text="Entrantes y Snacks" />
 
                 <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                     android:id="@+id/carousel5"
