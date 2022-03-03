@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Zaml">
         <activity
-            android:name=".Carrito"
+            android:name=".MapsActivityYoutube"
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
@@ -27,7 +27,12 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBrw2RnxoF-jkhdQcQLPznSnaFiEXb5tc0" />
+            android:value="YOUR_API_KEY" />
+
+        <activity
+            android:name=".Carrito"
+            android:exported="false" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -12,7 +12,7 @@ class Geometry {
         return coordinates
     }
 
-    fun setCoordinates(coordinates: ArrayList<Double>?) {
+    fun setCoordinates(coordinates: ArrayList<Double>) {
         this.coordinates = coordinates!!
     }
 }

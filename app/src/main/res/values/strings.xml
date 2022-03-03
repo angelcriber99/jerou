@@ -25,7 +25,7 @@
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>
     <string name="didn_t_get_otp_resend">Did not get otp resend?</string>
-
+    <string name="title_activity_maps_places">MapsActivityPlaces</string>
 
 
 </resources>

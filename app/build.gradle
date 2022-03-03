@@ -77,8 +77,18 @@ dependencies {
 
     //Maps
     implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    // KTX for the Maps SDK for Android
+    implementation 'com.google.maps.android:maps-ktx:3.2.1'
+    // (Optional) KTX for the Maps SDK for Android Utility Library
+    implementation 'com.google.maps.android:maps-utils-ktx:3.2.1'
 
     //Menu lateral izquierdo
     implementation 'androidx.drawerlayout:drawerlayout:1.1.1'
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+
+    //Google Places
+    implementation 'com.google.android.libraries.places:places:2.5.0'
+
+    //Youtube
+
 }
