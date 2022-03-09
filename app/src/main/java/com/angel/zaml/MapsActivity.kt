@@ -69,7 +69,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         //Tipo Call
         val llamada = restaurantApi.findRestaurants()
 
-        var response = llamada.execute()
+        val response = llamada.execute()
 
         val restaurantes: Result? = response?.body()
 
@@ -144,9 +144,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
 
         for (num in 0 until (restaurants.size)) {
-            var title = restaurants.get(num).getTitle();
-            var lat : Double = String.format("%.3f", restaurants.get(num).getLat()!!).toDouble();
-            var lng : Double = String.format("%.3f", restaurants.get(num).getLng()!!).toDouble();
+            val title = restaurants.get(num).getTitle();
+            val lat : Double =  restaurants.get(num).getLat()!!.toDouble();
+            val lng : Double = restaurants.get(num).getLng()!!.toDouble();
 
 
             val localizacion = LatLng(lat, lng)
