@@ -69,7 +69,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         //Tipo Call
         val llamada = restaurantApi.findRestaurants()
 
-        val response = llamada.execute()
+        val  response = llamada.execute()
 
         val restaurantes: Result? = response?.body()
 
@@ -145,10 +145,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         for (num in 0 until (restaurants.size)) {
             val title = restaurants.get(num).getTitle();
-            val lat : Double =  restaurants.get(num).getLat()!!.toDouble();
-            val lng : Double = restaurants.get(num).getLng()!!.toDouble();
+            var lat : Double =  restaurants.get(num).getLat()!!.toDouble();
+            var lng : Double = restaurants.get(num).getLng()!!.toDouble();
 
-
+            lat %= 2.5 + 40
+            lng %= 15
             val localizacion = LatLng(lat, lng)
             googleMap.addMarker(
                 MarkerOptions()

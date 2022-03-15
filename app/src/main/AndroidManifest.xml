@@ -11,9 +11,7 @@
         android:roundIcon="@mipmap/ic_jerou_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zaml">
-        <activity
-            android:name=".MapsActivityYoutube"
-            android:exported="false" />
+
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -27,7 +25,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="AIzaSyAkB2idkTVL5zFjONK0H_HKF3XOOZ3X3Dg" />
 
         <activity
             android:name=".Carrito"
