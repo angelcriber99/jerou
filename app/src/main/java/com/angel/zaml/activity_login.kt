@@ -132,16 +132,15 @@ class activity_login : AppCompatActivity() {
     fun onClickLogin(view: android.view.View) {
         //Esto de va a realizar cuando pulse el boton Next
         //Intent es una clase que recibe dos parametros, donde estamos y a donde vamos
-        var email= R.id.Email
-        var password=R.id.Password
 
-        if (email != null && password != null) {
+
+        if (Email.text != null && Password.text != null) {
             //Comprobamos que los campos no son vacios
-            if (email.toString() != "" && password.toString() != "") {
+            if (Email.text.toString() != "" && Password.text.toString() != "") {
                 try {
                     FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                        email.toString(),
-                        password.toString()
+                        Email.text.toString(),
+                        Password.text.toString()
                     ).addOnCompleteListener {
                         if (it.isSuccessful) {
                             showLoginActivity()
@@ -157,8 +156,8 @@ class activity_login : AppCompatActivity() {
                     showError()
                 }
             }else{
-                val email = Email.toString()
-                val password = Password.toString()
+                val email = Email.text.toString()
+                val password = Password.text.toString()
                 if (email == "" || email ==null) {
                     val builder = AlertDialog.Builder(this)
                     builder.setTitle("Error")
