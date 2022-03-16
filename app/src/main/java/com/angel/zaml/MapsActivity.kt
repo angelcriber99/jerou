@@ -1,8 +1,11 @@
 package com.angel.zaml
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.StrictMode
 import android.os.StrictMode.ThreadPolicy
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.angel.zaml.databinding.ActivityMapsBinding
 import com.angel.zaml.interfaces.Restaurante_Api
@@ -168,6 +171,59 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))*/
 
 
+    }
+
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_tres_puntos, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val item_selected: Int = item.itemId
+
+        if (item_selected == R.id.item1) {
+            cambiarPantallaCuenta()
+        }
+
+        if (item_selected == R.id.item2) {
+            CambiarPantallaMapa()
+        }
+        if (item_selected == R.id.item3) {
+            val loginIntent = Intent(this, Carrito::class.java)
+            startActivity(loginIntent)
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    //Cambiar a la pantalla Cuenta
+    fun cambiarPantallaCuenta(){
+        val loginIntent = Intent(this, Cuenta::class.java)
+        startActivity(loginIntent)
+    }
+
+    fun CambiarPantallaBurger() {
+        val loginIntent = Intent(this, BurgerKing::class.java)
+        startActivity(loginIntent)
+    }
+
+    fun CambiarPantallaMcDonalds() {
+        val loginIntent = Intent(this, McDonalds::class.java)
+        startActivity(loginIntent)
+    }
+    fun CambiarPantallaKFC() {
+        val loginIntent = Intent(this, KFC::class.java)
+        startActivity(loginIntent)
+    }
+
+    fun CambiarPantallaTacoBell() {
+        val loginIntent = Intent(this, TacoBell::class.java)
+        startActivity(loginIntent)
+    }
+
+    fun CambiarPantallaMapa() {
+        val loginIntent = Intent(this, MapsActivity::class.java)
+        startActivity(loginIntent)
     }
 }
 
