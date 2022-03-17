@@ -16,6 +16,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116"
+        app:layout_constraintVertical_bias="0.091"
         app:srcCompat="@drawable/icons8_shopping_cart_64" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
