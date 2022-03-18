@@ -53,7 +53,7 @@ class Cuenta : AppCompatActivity() {
 
         Toast.makeText(this, "Datos guardados", Toast.LENGTH_SHORT).show()
 
-        binding.tvResult.text = "Nombre:$insertDNI \nDirección: $insertHome \nEmail: $insertEMAIL \nCódigo Postal: $insertCP \nNúmero de teléfono: $insertNUMTEL"
+        binding.tvResult.text = "Nombre: $insertDNI \nDirección: $insertHome \nEmail: $insertEMAIL \nCódigo Postal: $insertCP \nNúmero de teléfono: $insertNUMTEL"
 
     }
 
@@ -69,7 +69,7 @@ class Cuenta : AppCompatActivity() {
         val cp = sharedPref.getString(CP, "")
         val numtel = sharedPref.getString(NUMTEL, "")
 
-        binding.tvResult.text = "Nombre:$dni \nDirección: $home \nEmail: $email \nCódigo Postal: $cp \nNúmero de teléfono: $numtel"
+        binding.tvResult.text = "Nombre: $dni \nDirección: $home \nEmail: $email \nCódigo Postal: $cp \nNúmero de teléfono: $numtel"
 
 
     }

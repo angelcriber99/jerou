@@ -90,16 +90,16 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="365dp"
+        android:layout_height="61dp"
         android:text="Rellene la siguiente información para poder facturar con éxito. Todos los campos son obligatorios."
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/dnicuenta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/emailcuenta"
@@ -108,6 +108,7 @@
         android:ems="10"
         android:hint="Email para envío factura"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -122,6 +123,7 @@
         android:ems="10"
         android:hint="Número de telefono"
         android:inputType="phone"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -136,6 +138,7 @@
         android:ems="10"
         android:hint="Código Postal"
         android:inputType="phone"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/telefonocuenta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
