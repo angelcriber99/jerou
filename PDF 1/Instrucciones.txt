@@ -1,0 +1,9 @@
+1PDF-> 	- Portada 
+	- Índice
+        - Proyecto de aplicacion
+        - Porqué hacemos esta APP (Estudio de mercado)
+        - A quién va dirigida
+        - Descripción del equipo diciendo que ha hecho cada uno
+        - Propuesta inicial(lo que va a tener nuestra app)->Proto io
+        - Futuros cambios/implementaciones->
+        - Como monetizarla

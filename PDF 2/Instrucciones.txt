@@ -1,0 +1,4 @@
+2PDF-> Manual de usuario
+       - Pantallas (las que al final se han hecho)
+       - Análisis de cada una de las pantallas poner lo importante de cada una de ellas
+       - Casos de uso ( por ej los botones a donde llevan)Poner los más importantes(de 5 a 10)
